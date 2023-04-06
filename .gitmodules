@@ -1,3 +1,4 @@
 [submodule "Genesis 8 Component Morphs"]
 	path = Genesis 8 Component Morphs
 	url = https://github.com/DRincs-Productions/daz-assert-genesis8-component-morphs
+	branch = main
