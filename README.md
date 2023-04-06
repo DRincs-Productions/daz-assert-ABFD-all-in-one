@@ -1,1 +1,2 @@
-# daz-assert-ABFD-all-in-one
+## Add assert ABFD
+`git submodule add <link> '<Neme Folder>'`
