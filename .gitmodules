@@ -70,3 +70,7 @@
 	path = Sexual
 	url = https://github.com/DRincs-Productions/daz-assert-sexual
 	branch = main
+[submodule "Restaurants Bars Nightclub"]
+	path = Restaurants Bars Nightclub
+	url = https://github.com/DRincs-Productions/daz-assert-bars-nightclubs-clubs-restaurants
+	branch = main
