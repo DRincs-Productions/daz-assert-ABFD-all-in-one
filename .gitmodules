@@ -38,3 +38,7 @@
 	path = School Library Art Music
 	url = https://github.com/DRincs-Productions/daz-assert-school-cheerleader-library-art-music
 	branch = main
+[submodule "Vehicles"]
+	path = Vehicles
+	url = https://github.com/DRincs-Productions/daz-assert-vehicles
+	branch = main
