@@ -13,21 +13,28 @@
 [submodule "Urban Environment"]
 	path = Urban Environment
 	url = https://github.com/DRincs-Productions/daz-assert-urban
+	branch = main
 [submodule "Hair"]
 	path = Hair
 	url = https://github.com/DRincs-Productions/daz-assert-hair
+	branch = main
 [submodule "Clothes"]
 	path = Clothes
 	url = https://github.com/DRincs-Productions/daz-assert-clothes
+	branch = main
 [submodule "Props"]
 	path = Props
 	url = https://github.com/DRincs-Productions/daz-assert-props-pose-posing
+	branch = main
 [submodule "Pose"]
 	path = Pose
 	url = https://github.com/DRincs-Productions/daz-assert-pose-posing
+	branch = main
 [submodule "Assert ABFD"]
 	path = Assert ABFD
 	url = https://github.com/DRincs-Productions/daz-assert-ABFD
+	branch = main
 [submodule "School Library Art Music"]
 	path = School Library Art Music
 	url = https://github.com/DRincs-Productions/daz-assert-school-cheerleader-library-art-music
+	branch = main
