@@ -58,3 +58,11 @@
 	path = Home
 	url = https://github.com/DRincs-Productions/daz-assert-home-house-bathroom
 	branch = main
+[submodule "Texture"]
+	path = Texture
+	url = https://github.com/DRincs-Productions/daz-assert-texture
+	branch = main
+[submodule "Robot"]
+	path = Robot
+	url = https://github.com/DRincs-Productions/daz-assert-robot-cyberpunk
+	branch = main
