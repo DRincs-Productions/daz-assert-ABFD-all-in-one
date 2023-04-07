@@ -78,3 +78,7 @@
 	path = DAZ Library
 	url = https://github.com/DRincs-Productions/My-DAZ-3D-Library
 	branch = main
+[submodule "Emergencies Hospital Police Military"]
+	path = Emergencies Hospital Police Military
+	url = https://github.com/DRincs-Productions/daz-assert-Frontline-emergencies-hospital-police-military-firefighters
+	branch = main
