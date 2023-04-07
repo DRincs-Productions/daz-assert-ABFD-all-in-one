@@ -50,3 +50,7 @@
 	path = Beach Pool
 	url = https://github.com/DRincs-Productions/daz-assert-beach-pool
 	branch = main
+[submodule "Office"]
+	path = Office
+	url = https://github.com/DRincs-Productions/daz-assert-office
+	branch = main
