@@ -46,3 +46,7 @@
 	path = Sport
 	url = https://github.com/DRincs-Productions/daz-assert-sport
 	branch = main
+[submodule "Beach Pool"]
+	path = Beach Pool
+	url = https://github.com/DRincs-Productions/daz-assert-beach-pool
+	branch = main
