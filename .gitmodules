@@ -42,3 +42,7 @@
 	path = Vehicles
 	url = https://github.com/DRincs-Productions/daz-assert-vehicles
 	branch = main
+[submodule "Sport"]
+	path = Sport
+	url = https://github.com/DRincs-Productions/daz-assert-sport
+	branch = main
