@@ -13,3 +13,6 @@
 [submodule "Urban Environment"]
 	path = Urban Environment
 	url = https://github.com/DRincs-Productions/daz-assert-urban
+[submodule "Hair"]
+	path = Hair
+	url = https://github.com/DRincs-Productions/daz-assert-hair
