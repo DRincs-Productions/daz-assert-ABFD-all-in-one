@@ -54,3 +54,7 @@
 	path = Office
 	url = https://github.com/DRincs-Productions/daz-assert-office
 	branch = main
+[submodule "Home"]
+	path = Home
+	url = https://github.com/DRincs-Productions/daz-assert-home-house-bathroom
+	branch = main
