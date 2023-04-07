@@ -89,3 +89,4 @@
 [submodule "Character Deprecate"]
 	path = Character Deprecate
 	url = https://github.com/DRincs-Productions/daz-assert-character-ABFD-Deprecate
+	branch = main
