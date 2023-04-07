@@ -22,3 +22,6 @@
 [submodule "Props"]
 	path = Props
 	url = https://github.com/DRincs-Productions/daz-assert-props-pose-posing
+[submodule "Pose"]
+	path = Pose
+	url = https://github.com/DRincs-Productions/daz-assert-pose-posing
