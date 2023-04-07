@@ -16,3 +16,6 @@
 [submodule "Hair"]
 	path = Hair
 	url = https://github.com/DRincs-Productions/daz-assert-hair
+[submodule "Clothes"]
+	path = Clothes
+	url = https://github.com/DRincs-Productions/daz-assert-clothes
