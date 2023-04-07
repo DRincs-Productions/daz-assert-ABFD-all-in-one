@@ -2,3 +2,6 @@
 	path = Character Tool
 	url = https://github.com/DRincs-Productions/daz-assert-genesis8-component-morphs
 	branch = main
+[submodule "Weapons"]
+	path = Weapons
+	url = https://github.com/DRincs-Productions/daz-assert-weapons
