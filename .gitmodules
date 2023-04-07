@@ -5,3 +5,4 @@
 [submodule "Weapons"]
 	path = Weapons
 	url = https://github.com/DRincs-Productions/daz-assert-weapons
+	branch = main
