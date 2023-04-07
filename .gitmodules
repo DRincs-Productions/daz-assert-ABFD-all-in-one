@@ -66,3 +66,7 @@
 	path = Robot
 	url = https://github.com/DRincs-Productions/daz-assert-robot-cyberpunk
 	branch = main
+[submodule "Sexual"]
+	path = Sexual
+	url = https://github.com/DRincs-Productions/daz-assert-sexual
+	branch = main
