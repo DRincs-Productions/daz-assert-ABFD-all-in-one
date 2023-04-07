@@ -28,3 +28,6 @@
 [submodule "Assert ABFD"]
 	path = Assert ABFD
 	url = https://github.com/DRincs-Productions/daz-assert-ABFD
+[submodule "School Library Art Music"]
+	path = School Library Art Music
+	url = https://github.com/DRincs-Productions/daz-assert-school-cheerleader-library-art-music
