@@ -25,3 +25,6 @@
 [submodule "Pose"]
 	path = Pose
 	url = https://github.com/DRincs-Productions/daz-assert-pose-posing
+[submodule "Assert ABFD"]
+	path = Assert ABFD
+	url = https://github.com/DRincs-Productions/daz-assert-ABFD
