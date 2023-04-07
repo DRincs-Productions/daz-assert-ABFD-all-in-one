@@ -82,3 +82,7 @@
 	path = Emergencies Hospital Police Military
 	url = https://github.com/DRincs-Productions/daz-assert-Frontline-emergencies-hospital-police-military-firefighters
 	branch = main
+[submodule "Character"]
+	path = Character
+	url = https://github.com/DRincs-Productions/daz-assert-character-ABFD
+	branch = main
