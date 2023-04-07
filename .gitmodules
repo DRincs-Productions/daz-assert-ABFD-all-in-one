@@ -10,3 +10,6 @@
 	path = Nature Creatures
 	url = https://github.com/DRincs-Productions/daz-assert-animals-nature
 	branch = main
+[submodule "Urban Environment"]
+	path = Urban Environment
+	url = https://github.com/DRincs-Productions/daz-assert-urban
