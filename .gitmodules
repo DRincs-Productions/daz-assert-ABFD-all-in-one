@@ -6,3 +6,7 @@
 	path = Weapons
 	url = https://github.com/DRincs-Productions/daz-assert-weapons
 	branch = main
+[submodule "Nature Creatures"]
+	path = Nature Creatures
+	url = https://github.com/DRincs-Productions/daz-assert-animals-nature
+	branch = main
