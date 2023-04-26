@@ -2,6 +2,12 @@
 
 This repo allows you to download and manage all Assert projects needed for 3D development of ABFD.
 
+## Installation 
+```shell
+git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'DAZ_3D'
+cd DAZ_3D
+git submodule update --init --recursive
+```
 
 
 ## Add assert ABFD
