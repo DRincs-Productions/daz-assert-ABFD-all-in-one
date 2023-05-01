@@ -90,3 +90,6 @@
 	path = Character Deprecate
 	url = https://github.com/DRincs-Productions/daz-assert-character-ABFD-Deprecate
 	branch = main
+[submodule "Large File Storage 01"]
+	path = Large File Storage 01
+	url = https://github.com/lollib756764/daz-assert-lfs
