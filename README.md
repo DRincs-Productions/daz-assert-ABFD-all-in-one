@@ -8,7 +8,7 @@ git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'DAZ_
 cd DAZ_3D
 git submodule update --init --recursive
 ```
-
+After that use [GitHub Desktop](https://desktop.github.com/)
 
 ## Add assert ABFD
 `git submodule add <link> '<Neme Folder>'`
