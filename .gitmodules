@@ -93,3 +93,6 @@
 [submodule "Large File Storage 01"]
 	path = Large File Storage 01
 	url = https://github.com/lollib756764/daz-assert-lfs
+[submodule "Character Famous"]
+	path = Character Famous
+	url = https://github.com/DRincs-Productions/daz-assert-famous-characters
