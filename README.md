@@ -9,7 +9,7 @@ git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'DAZ_
 cd DAZ_3D
 git submodule update --init --recursive
 ```
-After that use [GitHub Desktop](https://desktop.github.com/) and open the folder.
+After that use [GitHub Desktop](https://desktop.github.com/) and [open the folder](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop).
 
 ## Connect them to daz:
 1) In Daz Open `Edit/Preferences/Content/Content Dictionary Manager...`      
