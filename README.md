@@ -22,14 +22,9 @@ After that use [GitHub Desktop](https://desktop.github.com/) and [open the folde
 ![image](https://user-images.githubusercontent.com/67595890/190847307-1c821678-2014-4d54-af2a-709c373c6abe.png)
  
 ## Test
-
-Now you should have something like this:    
-![image](https://user-images.githubusercontent.com/67595890/190847385-ecf9cbd2-28a2-491d-af60-366435b5c433.png)     
 Now in the folder 'ABFD-assert' open  MC       
 ![image](https://user-images.githubusercontent.com/67595890/190847401-7fa7b8e8-d41e-4f5d-a0a0-c36b0027d59f.png)     
-it doesn't see give you errors otherwise you did something wrong.    
-Also try     
-![image](https://user-images.githubusercontent.com/67595890/190847420-06742eea-8526-4ad1-92ee-35981619848d.png)     
+it doesn't see give you errors otherwise you did something wrong.      
 
 
 
