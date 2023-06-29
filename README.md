@@ -13,7 +13,7 @@ After that use [GitHub Desktop](https://desktop.github.com/) and [open the folde
 
 ## Install Mesh Grabber (Important) 
 1. [Download](https://raw.githubusercontent.com/DRincs-Productions/daz-assert-genesis-8-9-component-morphs/main/Mesh%20Grabber%20(Win%20%26%20Mac).rar)
-2. extract file ![image](https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one/assets/67595890/ab05f137-a8ea-42af-8e42-bb546f6393e1) into `***\Daz 3D\Applications\64-bit\DAZ 3D\DAZStudio4\scripts`
+2. extract file ![image](https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one/assets/67595890/dc784255-dbb2-4cc7-8b80-8cc4b6becbd9) into `***\Daz 3D\Applications\64-bit\DAZ 3D\DAZStudio4\scripts`
 
 
 ## Connect them to daz:
