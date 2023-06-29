@@ -12,7 +12,7 @@ git submodule update --init --recursive
 After that use [GitHub Desktop](https://desktop.github.com/) and [open the folder](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop).
 
 ## Install Mesh Grabber (Important) 
-1. [Download](https://raw.githubusercontent.com/DRincs-Productions/daz-assert-genesis-8-9-component-morphs/main/Mesh Grabber (Win %26 Mac).rar)
+1. [Download](https://raw.githubusercontent.com/DRincs-Productions/daz-assert-genesis-8-9-component-morphs/main/Mesh%20Grabber%20(Win%20%26%20Mac).rar)
 2. extract file into `***\Daz 3D\Applications\64-bit\DAZ 3D\DAZStudio4\scripts`
 
 
