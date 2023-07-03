@@ -38,12 +38,13 @@ it doesn't see give you errors otherwise you did something wrong.
 If you need an Assert that is not included in this folder try checking in these bookmarks: [raindrop](https://raindrop.io/drincs)
 in case you find what you needed or not, request to add a new Assert [here](https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one/issues/new/choose).
 
+## For [Upload](https://github.com/orgs/DRincs-Productions/teams/upload)
 
-## Add assert
+### Add assert
 `git submodule add <link> '<Neme Folder>'`
 
-## Update assert
+### Update assert
 `git submodule update --remote`
 
-## Remove assert
+### Remove assert
 `git rm '<Neme Folder>'`
