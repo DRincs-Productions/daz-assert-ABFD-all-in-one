@@ -2,6 +2,7 @@ name: Request Upload Member
 description: Open gesture ticket if you want to become an [Upload](https://github.com/DRincs-Productions/ABFD/wiki/Upload)
 title: "[Member]"
 labels: ["become a member"]
+assignees: ["donrp"]
 body:
   - type: textarea
     id: description
