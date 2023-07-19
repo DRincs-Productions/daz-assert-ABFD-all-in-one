@@ -27,7 +27,7 @@ body:
     id: similar
     attributes:
       label: Links of similar already used asserts 
-      description: "(please check if something similar has already been used in these asserts: https://github.com/DRincs-Productions?q=+daz-assert&type=all&language=&sort=)"
+      description: "Please check if something similar has already been used in these asserts: https://github.com/DRincs-Productions?q=+daz-assert&type=all&language=&sort="
     validations:
       required: false
   - type: textarea
