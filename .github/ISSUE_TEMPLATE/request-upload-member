@@ -1,0 +1,27 @@
+name: Request Upload Member
+description: Open gesture ticket if you want to become an [Upload](https://github.com/DRincs-Productions/ABFD/wiki/Upload)
+title: "[Member]"
+labels: ["become a member"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe yourself
+      description: Describe yourself. it may be helpful to add links of your accounts that show your work. And describe your experiences.
+    validations:
+      required: true
+  - type: textarea
+    id: language
+    attributes:
+      label: Why?
+      description: Why do you want to help me?
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: You agree to the terms for becoming a developer and state that you are over 18 years old. And you declare that you meet the following [requirements](https://github.com/DRincs-Productions/ABFD/wiki/Upload#requirements)
+      description: Project statements can have sexually oriented content and be used to create sex games.
+      options:
+        - label: Yes I want to help
+          required: true
