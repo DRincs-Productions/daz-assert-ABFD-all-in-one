@@ -15,7 +15,6 @@ body:
     id: dependencies
     attributes:
       label: List of dependencies
-      placeholder: "/data/DAZ 3D/Genesis 8/Female/Morphs/P3Design/Azra/CTRLP3DAzra.dsf\
-/Runtime/Textures/!P3D/Azra/P3DAzraArms_1004.jpg"
+      placeholder: "/data/DAZ 3D/Genesis 8/Female/Morphs/P3Design/Azra/CTRLP3DAzra.dsf"
     validations:
       required: true
