@@ -22,7 +22,7 @@ body:
     id: terms
     attributes:
       label: "Agree to the terms"
-      description: "Project statements can have sexually oriented content and be used to create sex games."
+      description: "[Terms](https://github.com/DRincs-Productions/ABFD/wiki/Upload#terms) and [Requirements](https://github.com/DRincs-Productions/ABFD/wiki/Upload#requirements). Project statements can have sexually oriented content and be used to create sex games."
       options:
-        - label: "I acknowledge that I have read and agree to the [terms](https://github.com/DRincs-Productions/ABFD/wiki/Upload#terms) and [requirements](https://github.com/DRincs-Productions/ABFD/wiki/Upload#requirements). I declare that I am over 18 years of age." 
+        - label: "I acknowledge that I have read and agree to the Terms and Requirements. I declare that I am over 18 years of age." 
           required: true
