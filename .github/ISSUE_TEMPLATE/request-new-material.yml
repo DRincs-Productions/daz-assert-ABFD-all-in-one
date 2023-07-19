@@ -1,0 +1,38 @@
+name: Request new material
+description: Request new material (please only legal links).
+title: "[New Material] "
+labels: ["daz assert"]
+assignees: ["donrp"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What is it?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why do you need it?
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Assert links
+      description: (please only legal links)
+    validations:
+      required: true
+  - type: textarea
+    id: similar
+    attributes:
+      label: Links of similar already used asserts 
+      description: "(please check if something similar has already been used in these asserts: https://github.com/DRincs-Productions?q=+daz-assert&type=all&language=&sort=)"
+    validations:
+      required: false
+  - type: textarea
+    id: quest_issues
+    attributes:
+      label: Link of the quest issues you need
+    validations:
+      required: false
