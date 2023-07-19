@@ -1,0 +1,21 @@
+name: Report Lack Dependency used an assert already in the project
+description: Report include only useful textures and dependencies. only make the report. If the element is useful and there are no other better elements.
+title: "[Lacks Dependency] "
+labels: ["bug", "daz assert"]
+assignees: ["donrp"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What is it?
+      placeholder: "images are useful, to show the element and where it is located"
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: List of dependencies
+      placeholder: "/data/DAZ 3D/Genesis 8/Female/Morphs/P3Design/Azra/CTRLP3DAzra.dsf
+/Runtime/Textures/!P3D/Azra/P3DAzraArms_1004.jpg"
+    validations:
+      required: true
