@@ -9,7 +9,7 @@ Install [Git](https://git-scm.com/)
 # It won't ask you for your password every time
 git config –global credential.helper store
 # login
-git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'then_delete_me'
+git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
 ```
 
 ```shell
