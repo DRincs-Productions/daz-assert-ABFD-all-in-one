@@ -4,8 +4,18 @@ This repo allows you to download and manage all Assert projects needed for 3D de
 
 ## Installation 
 Install [Git](https://git-scm.com/)
+
 ```shell
+# It won't ask you for your password every time
+git config –global credential.helper store
+# login
+git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'then_delete_me'
+```
+
+```shell
+# Download the parent project (a few MB)
 git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'DAZ_3D'
+# Download child projects (>100GB)
 cd DAZ_3D
 git submodule update --init --recursive
 ```
