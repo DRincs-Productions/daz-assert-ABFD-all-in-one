@@ -6,6 +6,11 @@ This repo allows you to download and manage all Assert projects needed for 3D de
 
 Use [Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) or use Linux, windows git doesn't work well
 
+```shell
+wsl --install
+bash
+```
+
 
 Install [Git](https://git-scm.com/)
 ```shell
