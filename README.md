@@ -22,6 +22,7 @@ Login
 # It won't ask you for your password every time
 git config –global credential.helper store
 # login
+# exemple user: DonRP
 git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
 ```
 
