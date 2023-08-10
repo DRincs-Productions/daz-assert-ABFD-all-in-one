@@ -3,8 +3,16 @@
 This repo allows you to download and manage all Assert projects needed for 3D development of ABFD.
 
 ## Installation 
-Install [Git](https://git-scm.com/)
 
+Use [Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) or use Linux, windows git doesn't work well
+
+
+Install [Git](https://git-scm.com/)
+```shell
+sudo apt-get install git
+```
+
+Login
 ```shell
 # It won't ask you for your password every time
 git config –global credential.helper store
@@ -12,6 +20,7 @@ git config –global credential.helper store
 git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
 ```
 
+Download
 ```shell
 # Download the parent project (a few MB)
 git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'DAZ_3D'
