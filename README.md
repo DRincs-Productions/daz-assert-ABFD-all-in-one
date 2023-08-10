@@ -70,10 +70,17 @@ in case you find what you needed or not, request to add a new Assert [here](http
 ## For [Upload](https://github.com/orgs/DRincs-Productions/teams/upload)
 
 ### Add assert
-`git submodule add <link> '<Neme Folder>'`
+```shell
+git submodule add <link> '<Neme Folder>'
+```
 
 ### Update assert
-`git submodule update --remote`
+```shell
+git config –global credential.helper store
+git submodule update --remote
+```
 
 ### Remove assert
-`git rm '<Neme Folder>'`
+```shell
+git rm '<Neme Folder>'
+```
