@@ -8,12 +8,12 @@ Use [Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/in
 
 ```shell
 wsl --install
-bash
 ```
 
 
 Install [Git](https://git-scm.com/)
 ```shell
+bash
 sudo apt-get install git
 ```
 
