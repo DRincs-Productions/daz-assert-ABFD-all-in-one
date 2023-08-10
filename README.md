@@ -17,13 +17,16 @@ Install [Git](https://git-scm.com/)
 sudo apt-get install git
 ```
 
+Generate GitHub token:
+https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token
+
 Login
 ```shell
 # It won't ask you for your password every time
 git config –global credential.helper store
 # login https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
 # exemple user: DonRP
-# exemple user: token: https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token
+# exemple user: token
 git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
 ```
 
