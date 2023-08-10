@@ -29,6 +29,11 @@ git config –global credential.helper store
 # exemple user: token
 git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
 ```
+```shell
+git config --global user.name "DonRP"
+# use token
+git config --global user.password "ghp_*********************************"
+```
 
 Download
 ```shell
