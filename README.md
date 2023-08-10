@@ -4,38 +4,30 @@ This repo allows you to download and manage all Assert projects needed for 3D de
 
 ## Installation 
 
-Use [Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) or use Linux, windows git doesn't work well
-
-```shell
-wsl --install
-```
-
-
 Install [Git](https://git-scm.com/)
 ```shell
 bash
 sudo apt-get install git
 ```
 
-Generate GitHub token:
-https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token
-
 Login
+github istruction: https://docs.github.com/en/enterprise-cloud@latest/github-cli/github-cli/quickstart
+Install [GitHub CLI](https://github.com/cli/cli#installation):
+windows:
 ```shell
-# It won't ask you for your password every time
-git config –global credential.helper store
-# login https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
-# exemple user: DonRP
-# exemple user: token
-git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
+winget install --id GitHub.cli
+# Use cmd and not powershell
+gh auth login
 ```
+linux:
 ```shell
-# info https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
-git config --global user.name "DonRP"
-# use token
-git config --global user.password "ghp_*********************************"
-# save
-git config --global credential.helper store
+sudo apt install gh -y
+gh auth login
+```
+mac:
+```shell
+brew install gh
+gh auth login
 ```
 
 Download
@@ -43,6 +35,7 @@ Download
 # Download the parent project (a few MB)
 git clone https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one 'DAZ_3D'
 # Download child projects (>100GB)
+# it will ask you for authentication for each project (sorry I couldn't make it automatic)
 cd DAZ_3D
 git submodule update --init --recursive
 ```
@@ -84,7 +77,6 @@ git submodule add <link> '<Neme Folder>'
 
 ### Update assert
 ```shell
-git config –global credential.helper store
 git submodule update --remote
 ```
 
