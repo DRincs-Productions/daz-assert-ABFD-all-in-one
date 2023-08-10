@@ -30,9 +30,12 @@ git config –global credential.helper store
 git clone https://github.com/DRincs-Productions/for-login 'then_delete_me'
 ```
 ```shell
+# info https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
 git config --global user.name "DonRP"
 # use token
 git config --global user.password "ghp_*********************************"
+# save
+git config --global credential.helper store
 ```
 
 Download
