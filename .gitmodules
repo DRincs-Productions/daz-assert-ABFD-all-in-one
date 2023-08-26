@@ -96,3 +96,6 @@
 [submodule "Character Famous"]
 	path = Character Famous
 	url = https://github.com/DRincs-Productions/daz-assert-famous-characters
+[submodule "Vintage"]
+	path = Vintage
+	url = https://github.com/DRincs-Productions/daz-assert-vintage
