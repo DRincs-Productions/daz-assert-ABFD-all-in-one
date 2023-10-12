@@ -6,6 +6,8 @@ This repo allows you to download and manage all Assert projects needed for 3D de
 
 Install [Git](https://git-scm.com/)
 
+
+linux:
 ```shell
 bash
 sudo apt-get install git
@@ -14,6 +16,7 @@ sudo apt-get install git
 Login
 github istruction: <https://docs.github.com/en/enterprise-cloud@latest/github-cli/github-cli/quickstart>
 Install [GitHub CLI](https://github.com/cli/cli#installation):
+
 windows:
 
 ```shell
