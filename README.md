@@ -61,8 +61,8 @@ After that use [GitHub Desktop](https://desktop.github.com/) and [open the folde
 
 ## Connect them to daz
 
-1) In Daz Open `Edit/Preferences/Content/Content Dictionary Manager...`
- ![image](https://user-images.githubusercontent.com/67595890/187970556-73c7c9a1-7def-4efe-ab4e-24f6a12e0f1e.png)
+1) In Daz Open `Edit/Preferences/Content/Content Dictionary Manager...`    
+ ![image](https://user-images.githubusercontent.com/67595890/187970556-73c7c9a1-7def-4efe-ab4e-24f6a12e0f1e.png)    
  ![image](https://user-images.githubusercontent.com/67595890/215262986-ae27c921-87e4-48d1-9414-bdf3acad6625.png)
 2) creates a working environment
 3) select it
