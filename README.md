@@ -14,7 +14,9 @@ sudo apt-get install git
 ```
 
 Login
+
 github istruction: <https://docs.github.com/en/enterprise-cloud@latest/github-cli/github-cli/quickstart>
+
 Install [GitHub CLI](https://github.com/cli/cli#installation):
 
 windows:
