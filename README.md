@@ -7,6 +7,9 @@ This repo allows you to download and manage all Assert projects needed for 3D de
 Install [Git](https://git-scm.com/)
 
 
+Install [Git LFS](https://git-lfs.com/)
+
+
 linux:
 ```shell
 bash
