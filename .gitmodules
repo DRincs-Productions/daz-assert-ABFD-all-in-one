@@ -105,3 +105,6 @@
 [submodule "Large File Storage 02"]
 	path = Large File Storage 02
 	url = https://github.com/lillo54346346/daz-assert-lfs
+[submodule "Lights HDRI"]
+	path = Lights HDRI
+	url = https://github.com/DRincs-Productions/daz-assert-hdri-lights
