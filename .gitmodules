@@ -102,3 +102,6 @@
 	path = Vintage
 	url = https://github.com/DRincs-Productions/daz-assert-vintage
 	branch = main
+[submodule "Large File Storage 02"]
+	path = Large File Storage 02
+	url = https://github.com/lillo54346346/daz-assert-lfs
