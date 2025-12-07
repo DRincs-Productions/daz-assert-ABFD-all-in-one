@@ -108,3 +108,6 @@
 [submodule "Lights HDRI"]
 	path = Lights HDRI
 	url = https://github.com/DRincs-Productions/daz-assert-hdri-lights
+[submodule "Character Old"]
+	path = Character Old
+	url = https://github.com/DRincs-Productions/daz-assert-character-abfd
