@@ -111,3 +111,6 @@
 [submodule "Character Old"]
 	path = Character Old
 	url = https://github.com/DRincs-Productions/daz-assert-character-abfd
+[submodule "docs"]
+	path = docs
+	url = https://github.com/DRincs-Productions/daz-assert-ABFD-all-in-one.wiki.git
