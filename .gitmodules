@@ -117,3 +117,6 @@
 [submodule "mcp-server"]
 	path = mcp-server
 	url = https://github.com/bluemoonfoundry/daz-mcp-server.git
+[submodule "Scene ABFD"]
+	path = Scene ABFD
+	url = https://github.com/DRincs-Productions/daz-assert-ABFD-scene
