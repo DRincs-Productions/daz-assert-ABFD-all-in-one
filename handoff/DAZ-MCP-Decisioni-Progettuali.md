@@ -386,3 +386,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Verificare i criteri con scene reali in DAZ Studio e aggiornare Skills, README e procedure Wiki pertinenti durante l'implementazione.
 
 | 2026-10-28 | Confermata | Ottimizzazione posa con arresto adattivo quando i miglioramenti sono trascurabili, valutando anatomia, contatti e qualità visiva. |
+
+## AI locale — selezione automatica GPU/CPU (decisione confermata)
+
+- Il DAZ MCP deve **rilevare automaticamente l'hardware disponibile** e usare la **GPU quando disponibile e compatibile** per stima scheletrica, ricostruzione 3D, analisi delle reference e ottimizzazione della posa/camera.
+- Adattare automaticamente modello, precisione numerica, dimensione dei batch, risoluzione e memoria impiegata alle **risorse reali del PC** (VRAM, RAM, driver e librerie disponibili), senza presumere un modello specifico di scheda grafica.
+- Se la GPU è assente, incompatibile, non disponibile o insufficiente, **ripiegare sulla CPU quando tecnicamente possibile**, segnalando in modo sintetico l'eventuale impatto su prestazioni e qualità; non chiedere ogni volta all'utente quale dispositivo utilizzare.
+- Prevedere recupero da errori di memoria e risorse, liberazione dei modelli/cache non necessari e fallback ragionevoli; evitare loop di retry e consumi di risorse incontrollati.
+- Codex sceglierà e testerà concretamente lo stack AI locale durante l'implementazione in base ad accuratezza, compatibilità, licenze, prestazioni e manutenzione, verificando il comportamento su hardware effettivo.
+- Documentare in `daz-mcp` e nelle procedure pertinenti i requisiti, il rilevamento hardware, il fallback e i limiti osservati.
+
+| 2026-10-28 | Confermata | AI locale usa automaticamente GPU quando disponibile, adatta il carico all'hardware e ripiega su CPU quando necessario. |
