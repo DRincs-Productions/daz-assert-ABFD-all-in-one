@@ -100,3 +100,21 @@ Codex è libero di valutare, combinare, sostituire o scartare i seguenti candida
 - Conservare le convenzioni esistenti sugli screenshot temporanei fuori dal repository e non committare i frame/cache generati.
 
 | 2026-10-28 | Confermata | Camera Live View locale selezionabile, con snapshot/analisi su richiesta per Codex e minimo consumo di token. |
+
+## Monitor multicamera esterno e vista libera — requisiti confermati
+
+- Il modulo Camera Live View deve prevedere una **finestra esterna dedicata**, capace di mostrare **più camere DAZ contemporaneamente**, oltre a una **vista libera di ispezione**.
+- La vista libera ("camera dell'utente" / prospettiva di navigazione) deve poter essere spostata e ruotata autonomamente, con zoom su dettagli, articolazioni, contatti e oggetti. Non deve alterare involontariamente posizione, rotazione, focale o altre impostazioni delle camere di produzione.
+- Codex deve poter scegliere quale vista osservare, muovere la vista libera e richiedere snapshot mirati; la visualizzazione live locale non deve inviare continuamente frame al contesto di Codex.
+- Codex dovrà verificare API, prestazioni e fattibilità della cattura simultanea di più viste in DAZ Studio; l'implementazione tecnica non è stata scelta.
+- Le immagini/cache prodotte restano fuori dai commit e rispettano le convenzioni di storage temporaneo del progetto.
+
+## Validatore Genesis 9 esistente — valutazione e migrazione proposta
+
+- File esistente nel repository principale: `validate_genesis9_rig.py` (letto il 2026-10-28).
+- Il file valida **strutturalmente** un JSON di cattura del rig Genesis 9: schema 1.0, nome figura, elenco e ID delle ossa, coordinate locali/world, canali di rotazione, relazioni padre-figlio, gruppi ossei essenziali e flag di cattura read-only. **Non** stima pose da immagini né certifica la correttezza del sistema di coordinate.
+- **Proposta da sottoporre a Codex:** valutare riuso/refactoring di questa logica dentro `daz-mcp` come servizio/strumento MCP di validazione rig, mantenendo test di regressione.
+- Prima di eliminare lo script originale, Codex dovrà cercare tutte le dipendenze/riferimenti nel progetto e nelle procedure, garantire la parità funzionale e aggiornare la documentazione. **Nessuna rimozione autorizzata o eseguita ora.**
+
+| 2026-10-28 | Confermata | Finestra esterna multicamera con vista libera navigabile e zoom indipendente dalle camere di produzione. |
+| 2026-10-28 | Proposta da valutare | Riutilizzare in `daz-mcp` il validatore `validate_genesis9_rig.py`, rimuovendo l'originale solo dopo verifica delle dipendenze e dei test. |
