@@ -397,3 +397,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Documentare in `daz-mcp` e nelle procedure pertinenti i requisiti, il rilevamento hardware, il fallback e i limiti osservati.
 
 | 2026-10-28 | Confermata | AI locale usa automaticamente GPU quando disponibile, adatta il carico all'hardware e ripiega su CPU quando necessario. |
+
+## Modelli AI locali — download e installazione autonomi (decisione confermata)
+
+- Codex può **scaricare, installare e configurare autonomamente** i modelli AI locali necessari all'analisi geometrica delle immagini di riferimento (scheletro 2D/3D, orientamenti, stima camera), senza richiedere approvazione per ogni download.
+- Prima di installare deve verificare **licenze e condizioni d'uso**, provenienza affidabile, compatibilità con il sistema/hardware, requisiti, dimensioni e spazio disponibile; scegliere modelli appropriati in base ad accuratezza, manutenzione e prestazioni.
+- Conservare pesi e cache dei modelli **localmente fuori dai repository Git**; non committare file di modello, dataset o output intermedi.
+- Riusare modelli già presenti quando compatibili, evitare download ripetuti e prevedere gestione degli errori, dei download incompleti e dei limiti di risorse.
+- La scelta del modello resta a Codex durante la fase di implementazione, da testare realmente con DAZ Studio; documentare installazione, requisiti e provenienza dei modelli nel nuovo `daz-mcp`.
+- La presente autorizzazione riguarda i **modelli di analisi locale a supporto di Codex**, non un sostituto di Codex né l'avvio immediato dell'implementazione.
+
+| 2026-10-28 | Confermata | Codex può scaricare e installare autonomamente i modelli AI locali necessari, dopo verifiche di licenza, affidabilità, requisiti e spazio, mantenendoli fuori da Git. |
