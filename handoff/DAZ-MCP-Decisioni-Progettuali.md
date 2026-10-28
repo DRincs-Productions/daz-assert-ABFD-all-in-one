@@ -118,3 +118,14 @@ Codex è libero di valutare, combinare, sostituire o scartare i seguenti candida
 
 | 2026-10-28 | Confermata | Finestra esterna multicamera con vista libera navigabile e zoom indipendente dalle camere di produzione. |
 | 2026-10-28 | Proposta da valutare | Riutilizzare in `daz-mcp` il validatore `validate_genesis9_rig.py`, rimuovendo l'originale solo dopo verifica delle dipendenze e dei test. |
+
+## Dashboard multicamera via browser — proposta tecnica da valutare
+
+- È **fattibile in linea di principio** una dashboard locale in Chrome/Chromium o altro programma, collegata a DAZ Studio tramite un servizio locale che distribuisce le anteprime delle camere.
+- Distinguere chiaramente tre livelli: DAZ produce/cattura le viste; il servizio locale le trasmette e riceve comandi; il browser mostra più camere e la vista libera, con navigazione/zoom.
+- Chrome DevTools MCP è un **candidato facoltativo** per permettere a Codex di controllare/ispezionare la pagina web; **non** produce da solo le immagini 3D di DAZ. Evitare di obbligare Codex a usare il browser per ogni operazione della camera quando sono disponibili API MCP DAZ dirette.
+- Le API DAZ documentano `Dz3DViewport.captureImage()`, `setCamera()` e gestione di più viewport tramite `DzViewportMgr`; questo **non dimostra ancora** che la cattura simultanea continua di tutte le camere sia efficiente o fattibile nella configurazione specifica. Codex dovrà prototipare e misurare aggiornamento, latenza e impatto sulle prestazioni.
+- Privilegiare stream locale/aggiornamenti differenziali o snapshot su richiesta, senza inviare frame continui al modello. Non introdurre render Iray intermedi.
+- La scelta browser vs applicazione desktop e la tecnologia di trasmissione restano **aperte** e saranno decise da Codex in base ai test.
+
+| 2026-10-28 | Proposta da valutare | Dashboard multicamera in Chrome/Chromium tramite servizio locale DAZ; Chrome DevTools MCP opzionale, non sostitutivo del backend DAZ. |
