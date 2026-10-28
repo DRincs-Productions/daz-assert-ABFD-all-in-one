@@ -375,3 +375,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - In fase di implementazione aggiornare `AGENTS.md`, le procedure Wiki e la documentazione `daz-mcp` per evitare ambiguità tra anteprima, verifica e approvazione.
 
 | 2026-10-28 | Confermata | Codex applica e verifica autonomamente le modifiche alla scena DAZ senza chiedere conferma per ogni intervento. |
+
+## Pose & Skeleton MCP — arresto adattivo dell'ottimizzazione (decisione confermata)
+
+- L'ottimizzazione della posa rispetto all'immagine di riferimento deve **fermarsi automaticamente quando i miglioramenti diventano trascurabili**, invece di usare obbligatoriamente un numero fisso di iterazioni o perseguire miglioramenti marginali indefinitamente.
+- La condizione di arresto deve considerare **somiglianza geometrica/visiva**, correttezza anatomica del rig Genesis 9, **contatti** con superfici e props, collisioni contestuali, occlusioni e confidenza delle stime.
+- Evitare che un piccolo miglioramento nei keypoint provochi peggioramenti sostanziali di anatomia, contatti o qualità della scena; valutare criteri combinati e soglie adattive.
+- Implementare protezioni da stagnazione, oscillazioni e cicli ripetuti, con limiti ragionevoli di tempo/iterazioni come salvaguardia tecnica, non come criterio principale di successo.
+- Codex riceve un report sintetico con motivazione dell'arresto, qualità raggiunta e problemi residui; distingue convergenza soddisfacente da arresto per limiti tecnici o dati insufficienti.
+- Verificare i criteri con scene reali in DAZ Studio e aggiornare Skills, README e procedure Wiki pertinenti durante l'implementazione.
+
+| 2026-10-28 | Confermata | Ottimizzazione posa con arresto adattivo quando i miglioramenti sono trascurabili, valutando anatomia, contatti e qualità visiva. |
