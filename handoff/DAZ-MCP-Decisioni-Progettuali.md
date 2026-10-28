@@ -408,3 +408,15 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - La presente autorizzazione riguarda i **modelli di analisi locale a supporto di Codex**, non un sostituto di Codex né l'avvio immediato dell'implementazione.
 
 | 2026-10-28 | Confermata | Codex può scaricare e installare autonomamente i modelli AI locali necessari, dopo verifiche di licenza, affidabilità, requisiti e spazio, mantenendoli fuori da Git. |
+
+## Chiarimento sui modelli locali e cache delle analisi (decisioni confermate)
+
+- Con «modelli AI locali» l'utente intende **esclusivamente modelli specializzati di computer vision e tool di elaborazione geometrica** che estraggono dalle immagini reference informazioni per Codex (keypoint/scheletro 2D, struttura/giunti 3D, orientamenti, confidenza, stima prospettiva/camera e retargeting). **Non installare LLM generalisti o modelli chat come Gemma/Llama** per questa funzione.
+- Codex resta il responsabile dell'interpretazione e composizione della scena; gli strumenti specializzati producono dati numerici/strutturati e non sostituiscono Codex.
+- I progetti già elencati (MMPose, SAM 3D Body, Multi-HMR 2, VGGT, OpenCV) restano **candidati da valutare**, non componenti tutti obbligatori; scegliere e scaricare solo ciò che serve.
+- **Cache locale delle analisi**: conservare e riutilizzare risultati di pose/scheletri/camera per immagini già analizzate, evitando nuove inferenze se immagine, versione del modello, parametri e altri input rilevanti non sono cambiati.
+- Invalidare/ricalcolare quando cambia uno di tali input; identificare risultati con fingerprint/versioni e gestire cache incomplete o corrotte. Memorizzare dati intermedi nel percorso locale ignorato `/.daz-mcp-cache/` (o altra collocazione locale documentata) senza committarli su GitHub; distinguere dai pesi dei modelli, anch'essi fuori Git.
+- Il download autonomo autorizzato in precedenza riguarda questi **tool/modelli specializzati**, non LLM generalisti.
+
+| 2026-10-28 | Chiarito | I modelli locali sono strumenti di computer vision/pose e camera estimation, non LLM tipo Gemma. |
+| 2026-10-28 | Confermata | Riutilizzare analisi di immagini reference tramite cache locale, invalidandola quando cambiano input, modello o parametri rilevanti. |
