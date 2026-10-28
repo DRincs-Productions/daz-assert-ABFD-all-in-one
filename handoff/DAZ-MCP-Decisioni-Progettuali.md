@@ -232,3 +232,13 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 
 | 2026-10-28 | Confermata | Deformazioni eseguite manualmente dall'utente, con promemoria finale delle aree da deformare. |
 | 2026-10-28 | Confermata | Codex può spostare/nascondere props; quelli spostati escono dal gruppo environment di base e passano in un gruppo props utilizzati; aggiornare le procedure in docs/. |
+
+## Gruppo Scene Props — decisione confermata
+
+- Creare e utilizzare un gruppo DAZ denominato **`Scene Props`** per raccogliere **tutti i props utilizzati attivamente durante la composizione della scena** e **tutti i props originari dell'environment di base che vengono modificati, spostati, ruotati o altrimenti adattati**.
+- Il gruppo va creato se assente e riutilizzato se già esistente, evitando duplicati. Non spostare indiscriminatamente l'intero environment statico che non è stato utilizzato o modificato.
+- Quando un prop passa dall'environment di base a `Scene Props`, conservarne trasformazione world-space, visibilità, materiali e collegamenti necessari; verificare i casi particolari di gerarchie, istanze o vincoli prima di effettuare il reparenting.
+- La libertà di Codex di nascondere props resta valida; se un prop è usato/modificato per la composizione, tracciarlo in `Scene Props` anche quando viene nascosto, senza cancellarlo.
+- Aggiornare esplicitamente `docs/Procedure-Scene-Posing-Completion.md` e le altre procedure interessate durante l'implementazione, con verifica reale in DAZ Studio.
+
+| 2026-10-28 | Confermata | Il gruppo dei props usati o modificati si chiama esattamente `Scene Props`; contiene anche i props spostati/modificati dall'environment di base. |
