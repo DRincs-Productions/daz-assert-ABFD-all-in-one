@@ -242,3 +242,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Aggiornare esplicitamente `docs/Procedure-Scene-Posing-Completion.md` e le altre procedure interessate durante l'implementazione, con verifica reale in DAZ Studio.
 
 | 2026-10-28 | Confermata | Il gruppo dei props usati o modificati si chiama esattamente `Scene Props`; contiene anche i props spostati/modificati dall'environment di base. |
+
+## Pose & Skeleton MCP — posa iniziale dalla libreria (decisione confermata)
+
+- Per ciascun personaggio la **posa iniziale deve provenire da una posa esistente nella libreria DAZ**, non essere costruita direttamente da zero dalla stima dello scheletro AI.
+- Codex cerca e seleziona una posa disponibile il più possibile simile alla reference, la mostra in anteprima quando previsto dalle procedure e la applica come base al Genesis 9.
+- L'AI locale analizza la reference ricavando keypoint/scheletro, stima 3D e confidenze; il modulo Pose & Skeleton calcola le correzioni e adatta progressivamente la posa di libreria fino ad avvicinarla all'immagine di riferimento, rispettando limiti anatomici, rig e occlusioni.
+- La posa iniziale è un punto di partenza, **non** un limite alla qualità o all'entità delle correzioni successive. Non confondere la scelta di una posa di libreria con la rinuncia alla stima AI o al retargeting.
+- Verificare il risultato rispetto alla camera di riferimento, ai contatti e alle collisioni contestuali; ricordare che la posa senza vestiti è provvisoria.
+- Codex deve verificare in DAZ Studio il funzionamento reale e aggiornare le procedure MD/Skills pertinenti durante l'implementazione.
+
+| 2026-10-28 | Confermata | Pose & Skeleton parte sempre da una posa della libreria DAZ, poi la corregge sulla base dello scheletro stimato dalla reference. |
