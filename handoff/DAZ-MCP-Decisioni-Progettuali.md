@@ -129,3 +129,14 @@ Codex è libero di valutare, combinare, sostituire o scartare i seguenti candida
 - La scelta browser vs applicazione desktop e la tecnologia di trasmissione restano **aperte** e saranno decise da Codex in base ai test.
 
 | 2026-10-28 | Proposta da valutare | Dashboard multicamera in Chrome/Chromium tramite servizio locale DAZ; Chrome DevTools MCP opzionale, non sostitutivo del backend DAZ. |
+
+## Acquisizione e consegna automatica delle camere di scena — decisione confermata
+
+- Aggiungere al modulo Camera Live View un'**operazione MCP unica, attivabile su richiesta**, che individui tutte le camere di scena e produca **un'immagine distinta per ciascuna**, **escludendo la vista/camera di lavoro** usata per navigare e ispezionare.
+- L'esclusione della camera di lavoro deve essere affidabile: distinguere esplicitamente la vista libera dalle camere di produzione, senza assumere che la camera attiva sia sempre quella di lavoro.
+- Le immagini devono essere etichettate con nome/identificativo della camera e rese disponibili per **l'invio all'utente come immagini separate**, evitando che Codex debba eseguire manualmente una cattura e un invio per ogni camera.
+- Codex dovrà verificare le capacità effettive del client MCP/Codex per allegare o mostrare automaticamente più immagini: se l'invio diretto non è supportato, prevedere un flusso alternativo con minimo intervento, senza promettere consegne impossibili.
+- Evitare render Iray intermedi, preservare stato delle camere e viewport, minimizzare chiamate e token; la funzione è **on demand**, non uno stream continuo verso Codex.
+- I file temporanei devono seguire le convenzioni del progetto ed essere esclusi dai commit Git.
+
+| 2026-10-28 | Confermata | Un comando MCP deve acquisire e predisporre l'invio separato delle immagini di tutte le camere di scena, escludendo la vista di lavoro. |
