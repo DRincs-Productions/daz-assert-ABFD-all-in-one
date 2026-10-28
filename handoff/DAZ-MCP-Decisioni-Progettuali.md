@@ -322,3 +322,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Per ogni corrispondenza incerta chiedere all'utente; non inventare associazioni e non iniziare ora le modifiche operative alla Wiki.
 
 | 2026-10-28 | Chiarito | La sidebar da mappare è un file MD della Wiki citato da AGENTS.md, non il pannello DAZ Studio. |
+
+## AGENTS.md — autonomia di Codex sugli MCP sviluppati internamente (decisione confermata)
+
+- Aggiungere a `AGENTS.md` del repository principale una regola esplicita: **Codex è autorizzato a modificare, rifattorizzare, ottimizzare ed estendere autonomamente gli MCP sviluppati e mantenuti dal progetto**, compreso il nuovo `daz-mcp`, e ad aggiungere nuove funzionalità quando utili al workflow.
+- Obiettivi: **migliorare affidabilità, prestazioni, efficacia e ridurre il consumo di token**, favorendo strumenti ad alto livello, operazioni batch, risultati strutturati e compatti, cache appropriate e meno round-trip/screenshot superflui.
+- Non richiedere approvazione per ogni miglioramento tecnico interno; Codex resta libero di aggiornare anche README, Skills e file MD delle procedure come già consentito dalle istruzioni esistenti.
+- **Distinguere gli MCP nostri dagli upstream/terzi** (es. `bluemoonfoundry/daz-mcp-server`): preferire estensioni e integrazioni nel nostro `daz-mcp`, evitando modifiche invasive o non necessarie ai sorgenti upstream.
+- Salvaguardie: rispettare gli obiettivi e le decisioni progettuali confermate dall'utente, mantenere compatibilità dove possibile, eseguire test reali in DAZ Studio per le funzioni interessate, documentare nuove funzionalità e aggiornare le procedure pertinenti. Per cambiamenti che alterano decisioni o comportamenti utente precedentemente approvati, chiedere conferma.
+- Questa è una **modifica richiesta per la futura fase di implementazione**: non modificare ora `AGENTS.md` né il codice MCP; registrare la decisione nel presente handoff.
+
+| 2026-10-28 | Confermata | AGENTS.md autorizzerà Codex a modificare ed estendere liberamente gli MCP nostri per migliorarne funzionamento ed efficienza token, con test e documentazione. |
