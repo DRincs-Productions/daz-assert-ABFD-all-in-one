@@ -253,3 +253,16 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Codex deve verificare in DAZ Studio il funzionamento reale e aggiornare le procedure MD/Skills pertinenti durante l'implementazione.
 
 | 2026-10-28 | Confermata | Pose & Skeleton parte sempre da una posa della libreria DAZ, poi la corregge sulla base dello scheletro stimato dalla reference. |
+
+## Scene Validation MCP — classificazione finale (decisione confermata)
+
+- Al termine della composizione, Codex deve eseguire una **validazione complessiva della scena**, producendo un rapporto sintetico e contestuale in tre categorie:
+  1. **Problemi bloccanti**: errori sostanziali di posa, disposizione, camera, collisioni gravi o incoerenze che Codex deve tentare di risolvere prima di dichiarare completato il lavoro.
+  2. **Problemi non bloccanti**: imperfezioni tollerabili nella fase corrente, da riportare senza impedire necessariamente la consegna.
+  3. **Interventi manuali dell'utente**: deformazioni di materassi/cuscini/superfici morbide e altre rifiniture esplicitamente riservate all'utente.
+- Codex valuta **gravità e categoria in base al contesto**, alle caratteristiche rigide/deformabili degli oggetti, all'intento creativo e alla fase del workflow (personaggi inizialmente senza vestiti); non usare soglie universali o correggere automaticamente ogni intersezione.
+- Per ogni rilievo includere oggetto/i, posizione/zona se disponibile, motivazione, livello di confidenza e azione consigliata; distinguere problemi risolti, irrisolti e da verificare dopo vestizione.
+- Il rapporto finale deve ricordare gli interventi manuali anche quando la scena è considerata pronta per la fase successiva.
+- Durante implementazione Codex deve testare in DAZ Studio e aggiornare le procedure MD pertinenti in `docs/` e la documentazione del nuovo MCP.
+
+| 2026-10-28 | Confermata | Scene Validation distingue problemi bloccanti, non bloccanti e interventi manuali; Codex valuta la gravità contestualmente. |
