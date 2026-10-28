@@ -312,3 +312,13 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 
 | 2026-10-28 | Confermata | I README descrittivi riguardano i submoduli asset del repository principale, non la libreria DAZ locale. |
 | 2026-10-28 | Confermata | Documentare con l'utente per ogni elemento della sidebar il collegamento a cartella/submodulo asset, senza inventare associazioni. |
+
+## Chiarimento sulla sidebar — file Markdown della Wiki (confermato)
+
+- La “sidebar” citata dall'utente **non è un pannello di DAZ Studio**: è **un file Markdown della Wiki del progetto principale**, richiamato anche da `AGENTS.md`.
+- Durante l'implementazione Codex deve individuare il **file esatto** nella Wiki checkout `docs/` seguendo i riferimenti di `AGENTS.md` (non presumere nome o struttura senza verifica), leggere gli elementi presenti e, **con l'aiuto dell'utente**, specificare per ciascuno a quale submodulo/cartella asset del repository principale corrisponde.
+- Aggiornare il Markdown della Wiki (e gli eventuali rimandi in `AGENTS.md` solo se necessari), mantenendo la navigazione e la sintassi esistente. Le modifiche al submodulo Wiki richiedono commit nel repository Wiki e aggiornamento del gitlink del principale.
+- La mappatura Wiki/sidebar → submoduli asset è fonte documentale per restringere e orientare la ricerca dell'Asset & Pose Library MCP, insieme ai README per submodulo approvati dall'utente.
+- Per ogni corrispondenza incerta chiedere all'utente; non inventare associazioni e non iniziare ora le modifiche operative alla Wiki.
+
+| 2026-10-28 | Chiarito | La sidebar da mappare è un file MD della Wiki citato da AGENTS.md, non il pannello DAZ Studio. |
