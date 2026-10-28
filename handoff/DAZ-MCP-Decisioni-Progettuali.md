@@ -78,3 +78,14 @@ Codex è libero di valutare, combinare, sostituire o scartare i seguenti candida
 | 2026-10-28 | Confermata | Codex mantiene autonomia nel posizionamento dei personaggi e nell'interpretazione della scena. |
 | 2026-10-28 | Confermata | Aggiornare la procedura di scena per focale e impostazioni complete della camera. |
 | 2026-10-28 | Confermata | Codex sceglierà liberamente i modelli AI dopo valutazione, senza vincoli sulle librerie suggerite. |
+
+## Dati generati dal MCP — decisione confermata
+
+- **Non committare nel progetto principale** gli output generati dal MCP durante l'analisi delle scene: scheletri/keypoint 2D e 3D, stime e calibrazioni della camera, risultati di ottimizzazione, cache dei modelli, log e dati intermedi.
+- Prevedere una directory locale dedicata e **ignorata da Git**, proposta: `/.daz-mcp-cache/` nella root del progetto principale, con sottocartelle per scena o task e nomi stabili quando utili. Il percorso esatto potrà essere valutato da Codex, purché resti escluso dal versionamento.
+- Codex dovrà aggiungere la directory a `.gitignore` durante l'implementazione e verificare che nessun output venga tracciato. Non ignorare indiscriminatamente file sorgente, procedure, Skill o asset deliberatamente versionati.
+- Distinguere i dati intermedi dagli eventuali **artefatti finali esplicitamente richiesti dall'utente**, per i quali valgono le convenzioni di salvataggio del progetto.
+- Conservare la regola esistente sugli screenshot del viewport: file temporanei in `%TEMP%/DAZ-Scene-Previews/`, fuori dal repository; non spostarli automaticamente nella nuova cache.
+- La directory ignorata e la modifica di `.gitignore` sono **da realizzare in seguito**; qui si registra soltanto la decisione.
+
+| 2026-10-28 | Confermata | Gli output di analisi del MCP devono restare in una cartella locale ignorata da Git, separati dal codice versionato. |
