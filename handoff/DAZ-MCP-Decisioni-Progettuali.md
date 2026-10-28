@@ -277,3 +277,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Durante l'implementazione Codex deve eseguire test di errore a metà batch in DAZ Studio e aggiornare le procedure Markdown pertinenti.
 
 | 2026-10-28 | Confermata | Batch Operations: rollback delle modifiche dipendenti e conservazione di quelle indipendenti riuscite. |
+
+## Asset & Pose Library MCP — accesso all'intera libreria installata (decisione confermata)
+
+- Codex è autorizzato a **cercare, selezionare e utilizzare autonomamente tutti gli asset DAZ effettivamente installati e disponibili**, non solo quelli già citati nel progetto principale, senza richiedere approvazione per ogni nuovo asset.
+- Questo comprende pose, props, personaggi e altri contenuti compatibili, nel rispetto delle istruzioni del progetto, delle dipendenze e dei limiti di compatibilità (in particolare Genesis 9).
+- **Registrare gli asset effettivamente utilizzati** nella scena in forma riproducibile, privilegiando percorso DAZ Studio Formats/content library, identificativo/nome e informazioni pertinenti; distinguere asset solo cercati/anteprima da quelli realmente applicati.
+- Per le pose rimane vincolante la decisione precedente: **partire da una posa della libreria DAZ**, poi rifinirla con Pose & Skeleton MCP secondo la reference.
+- Evitare copie inutili di asset, percorsi non validi, riferimenti a file non installati o operazioni che ne alterino i sorgenti. Riutilizzare l'indice/libreria già presente ove possibile.
+- Codex deve testare in DAZ Studio la ricerca, l'applicazione e la tracciabilità degli asset e aggiornare le procedure MD/Skills durante lo sviluppo.
+
+| 2026-10-28 | Confermata | Asset & Pose Library MCP può usare tutti gli asset DAZ installati, registrando quelli effettivamente utilizzati. |
