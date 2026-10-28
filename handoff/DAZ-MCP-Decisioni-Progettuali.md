@@ -420,3 +420,15 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 
 | 2026-10-28 | Chiarito | I modelli locali sono strumenti di computer vision/pose e camera estimation, non LLM tipo Gemma. |
 | 2026-10-28 | Confermata | Riutilizzare analisi di immagini reference tramite cache locale, invalidandola quando cambiano input, modello o parametri rilevanti. |
+
+## Implementazione — scena DAZ nuova dedicata agli esperimenti (decisione confermata)
+
+- Durante l'implementazione del nuovo `daz-mcp`, **Codex deve creare una nuova scena DAZ Studio dedicata esclusivamente a esperimenti e collaudi**, distinta dalle scene reali del progetto.
+- In questa scena di test Codex può caricare Genesis 9, pose della libreria, props e superfici, creare e modificare camere, provare estrazione/retargeting scheletro, placement, contatti, collisioni, reparenting in `Scene Props`, operazioni batch e relativi errori/rollback, snapshot, salvataggi e confronto con reference.
+- **Eseguire test pratici in DAZ Studio** sulle funzionalità sviluppate, includendo casi riusciti, casi limite e fallimenti controllati; correggere autonomamente i nostri MCP e ripetere i test finché i risultati sono verificati.
+- Tenere i **file di test e gli eventuali salvataggi sperimentali separati dalle scene di produzione** e, per impostazione predefinita, fuori dai percorsi/versionamenti del progetto destinati alle scene definitive; usare percorsi locali dedicati e documentati, evitando commit accidentali.
+- La possibilità di creare/salvare scene sperimentali è una **eccezione esplicita limitata allo sviluppo e collaudo**: nelle scene reali restano le procedure di produzione, il divieto di copie sperimentali arbitrarie e il salvataggio automatico dopo gruppi importanti di modifiche riuscite.
+- Codex deve riportare quali funzioni ha testato, esiti e limiti; non dichiarare completata una funzionalità non verificata realmente nella scena di prova.
+- In fase di implementazione integrare questa distinzione in `AGENTS.md`, README/Skills di `daz-mcp` e procedure Wiki pertinenti.
+
+| 2026-10-28 | Confermata | Codex deve creare una nuova scena DAZ Studio isolata per sperimentare e testare concretamente gli MCP, senza toccare scene di produzione. |
