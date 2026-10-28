@@ -89,3 +89,14 @@ Codex è libero di valutare, combinare, sostituire o scartare i seguenti candida
 - La directory ignorata e la modifica di `.gitignore` sono **da realizzare in seguito**; qui si registra soltanto la decisione.
 
 | 2026-10-28 | Confermata | Gli output di analisi del MCP devono restare in una cartella locale ignorata da Git, separati dal codice versionato. |
+
+## Camera Live View e osservazione a basso costo — decisione confermata (requisito)
+
+- Prevedere in `daz-mcp` strumenti MCP per **elencare le camere DAZ**, scegliere quella da osservare e ottenere il relativo viewport senza dover eseguire render Iray intermedi.
+- Distinguere **anteprima live locale** (eventuale finestra/pannello/stream sul PC, senza inviare continuamente frame a Codex) e **osservazione per Codex** (snapshot su richiesta, campionamento controllato e/o risultati di analisi locale sintetici).
+- Obiettivo: minimizzare consumo di token/crediti e traffico di immagini verso Codex; niente stream continuo di frame nel contesto del modello.
+- Prevedere selezione di una camera specifica, passaggio tra camere e possibilità di confrontare la vista con la reference. Verificare tecnicamente se sia possibile catturare viste di camere non attive senza alterare la selezione corrente; in caso contrario gestire ripristino sicuro dello stato.
+- La modalità di preview, la frequenza di aggiornamento, i metodi di cattura e l'interfaccia locale sono **da valutare e implementare da Codex**, senza assumere API DAZ non verificate.
+- Conservare le convenzioni esistenti sugli screenshot temporanei fuori dal repository e non committare i frame/cache generati.
+
+| 2026-10-28 | Confermata | Camera Live View locale selezionabile, con snapshot/analisi su richiesta per Codex e minimo consumo di token. |
