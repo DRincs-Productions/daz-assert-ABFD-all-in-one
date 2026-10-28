@@ -300,3 +300,15 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 
 | 2026-10-28 | Confermata | Ricerca asset/pose prima rapida per metadati e percorsi, poi approfondita solo sui candidati. |
 | 2026-10-28 | Confermata | README descrittivo per ogni cartella di asset, previo confronto e conferma dell'utente per ciascuna cartella; README usati per filtrare la ricerca. |
+
+## Documentazione dei submoduli asset e mappatura sidebar (decisione confermata)
+
+- Le cartelle di asset da documentare sono **i submoduli Git del repository principale `daz-assert-ABFD-all-in-one`**, non le directory della libreria DAZ Studio installata sul computer.
+- Per **ogni submodulo/cartella di asset**, Codex deve chiedere **separatamente all'utente** contenuto, significato e conferma prima di aggiungere o modificare la descrizione README relativa. Non assumere che il nome della cartella descriva esaustivamente gli asset.
+- Con l'aiuto dell'utente, documentare anche **ogni elemento della sidebar** (termine dell'utente: “didebar”, da verificare nel progetto) indicando **a quale cartella/submodulo di asset è collegato**, e possibilmente il ruolo dell'elemento e la relazione con i contenuti. Verificare la sidebar effettiva e la sua configurazione prima di fissare percorsi o corrispondenze.
+- Le associazioni sidebar → submodulo/cartella devono essere esplicite, mantenibili e utilizzabili dal sistema Asset & Pose Library per circoscrivere le ricerche ed escludere in modo rapido cartelle irrilevanti.
+- Per collegamenti ambigui, multipli o mancanti, **chiedere all'utente** anziché inventare; non presumere una corrispondenza sempre uno-a-uno.
+- Le modifiche a README interni ai submoduli devono essere committate nel rispettivo repository e aggiornare poi il gitlink del repository principale; rispettare eventuali submoduli di terzi o in sola lettura e chiedere prima di modificarli. Nessuna modifica operativa ai submoduli finché l'utente non autorizza la fase di implementazione.
+
+| 2026-10-28 | Confermata | I README descrittivi riguardano i submoduli asset del repository principale, non la libreria DAZ locale. |
+| 2026-10-28 | Confermata | Documentare con l'utente per ogni elemento della sidebar il collegamento a cartella/submodulo asset, senza inventare associazioni. |
