@@ -354,3 +354,13 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Durante l'implementazione riportare la regola in `AGENTS.md`, nella documentazione `daz-mcp` e nelle procedure pertinenti.
 
 | 2026-10-28 | Confermata | Codex recupera autonomamente dagli errori dei nostri MCP, anche modificandone il codice; coinvolge l'utente solo se necessario. |
+
+## Ottimizzazione token — output MCP sintetici per impostazione predefinita (decisione confermata)
+
+- Gli MCP sviluppati dal progetto devono restituire **risposte brevi, strutturate e mirate per impostazione predefinita**: esito, identificativi essenziali, cambiamenti rilevanti, metriche utili, avvisi/errori e prossime azioni se necessarie.
+- **Log estesi, dettagli tecnici, grandi elenchi, dati geometrici voluminosi, screenshot e immagini** vanno resi disponibili **su richiesta** o quando indispensabili alla verifica, non allegati sistematicamente a ogni chiamata.
+- Prevedere filtri, paginazione, selezione campi, livelli di dettaglio/diagnostica e riferimenti a dati locali in cache ove opportuno; privilegiare calcoli locali, batch e risultati aggregati per ridurre round-trip e token.
+- Non sacrificare informazioni critiche per la sicurezza, lo stato della scena, i fallimenti/rollback o le decisioni che Codex deve prendere: la sintesi deve rimanere sufficientemente informativa.
+- Codex può modificare autonomamente i nostri MCP per migliorare ulteriormente l'efficienza, misurando/verificando che l'ottimizzazione non comprometta correttezza e funzionamento in DAZ Studio; aggiornare `AGENTS.md`, README, Skills e procedure pertinenti in fase di implementazione.
+
+| 2026-10-28 | Confermata | MCP con output sintetici e strutturati di default; dettagli, log e immagini soltanto su richiesta o quando necessari. |
