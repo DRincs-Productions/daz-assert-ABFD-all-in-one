@@ -173,3 +173,29 @@ Queste sono **capacità richieste**, non vincoli sull'architettura o sulla scelt
 | 2026-10-28 | Confermata | Tutte le sette funzionalità avanzate di camera, inclusa ottimizzazione locale rispetto alla reference. |
 | 2026-10-28 | Confermata | Aggiornamento continuo delle procedure MD e dei workflow durante lo sviluppo. |
 | 2026-10-28 | Confermata | Apertura di DAZ Studio e test funzionali reali durante lo sviluppo. |
+
+## Scene Inspector & Spatial Intelligence — progettazione approvata
+
+Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integri, non duplichi**, le capacità già presenti nell'MCP upstream e l'autonomia di Codex nell'identificazione semantica degli oggetti.
+
+### Sette capacità richieste
+
+1. **Scene Inventory**: elencare figure, prop, camere, nodi e gerarchie con ID stabili, filtri e interrogazioni mirate per evitare dump voluminosi.
+2. **Spatial Query**: leggere trasformazioni locali/world, orientamento, bounding box, dimensioni, distanze, relazioni e coordinate/unità dichiarate; distinguere stime da misure effettive.
+3. **Surface Detection**: individuare superfici utilizzabili (letto, sedia, divano, pavimento ecc.) usando geometria, orientamento e dimensioni, senza affidarsi esclusivamente ai nomi dei nodi; restituire confidenza e alternative quando ambiguo.
+4. **Contact Detection**: valutare distanza/contatto di piedi, mani, bacino e altre parti del corpo rispetto alle superfici, con tolleranze esplicite e indicazione di affidabilità.
+5. **Collision Detection**: identificare possibili compenetrazioni fra figure e oggetti, indicando zona, coppia coinvolta e gravità; distinguere test approssimativi (bounding box) da test più precisi.
+6. **Smart Placement**: proporre e, solo quando richiesto da Codex, applicare spostamenti/rotazioni per collocare personaggi su superfici, preservando per quanto possibile la posa e controllando contatti e collisioni.
+7. **Scene Change Tracking**: confrontare snapshot/stato e restituire differenze compatte su oggetti e proprietà cambiate; gestire invalidazione cache e modifiche effettuate anche fuori dall'MCP.
+
+### Workflow e vincoli
+
+- Workflow tipico: identificazione personaggio/oggetto → rilevazione superficie → query spaziali → anteprima di placement → applicazione controllata → verifica contatti/collisioni → risultato strutturato sintetico a Codex.
+- Analisi **read-only di default**; separare esplicitamente operazioni di lettura e mutazione.
+- Prima delle mutazioni, prevedere snapshot/ripristino delle trasformazioni rilevanti e non alterare involontariamente pose, camere o altri elementi.
+- Ottimizzare numero di chiamate e token: batch, filtri, output compatti, cache con invalidazione corretta. Non occultare incertezze, coordinate o limiti delle misure.
+- Codex resta responsabile delle scelte di composizione e dei significati semantici; il modulo fornisce geometria e suggerimenti, non decide autonomamente l'intento creativo.
+- Durante implementazione: verificare le API reali DAZ, riutilizzare MCP upstream, eseguire test incrementali in DAZ Studio e aggiornare procedure Markdown/Skills pertinenti.
+- Questioni da chiarire: politica di applicazione delle correzioni automatiche, trattamento delle collisioni intenzionali e livello di accuratezza/prestazioni da privilegiare.
+
+| 2026-10-28 | Confermata | Progettazione del modulo Scene Inspector & Spatial Intelligence con sette capacità, analisi read-only predefinita e placement verificabile. |
