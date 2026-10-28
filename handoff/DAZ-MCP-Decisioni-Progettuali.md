@@ -212,3 +212,23 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - **Politica di correzione**: il modulo propone/calcola correzioni proporzionate al caso, mentre Codex decide se applicarle; non introdurre una regola universale di correzione automatica per tutte le collisioni. Conservare snapshot/ripristino e testare in DAZ Studio.
 
 | 2026-10-28 | Confermata | Collisioni e contatti contestuali a rigidità/deformabilità, gravità e fase di lavorazione; posa senza vestiti provvisoria. |
+
+## Deformazioni manuali e gestione dei props dell'environment — decisioni confermate
+
+### Deformazioni delle superfici morbide
+- Le deformazioni di materassi, cuscini, divani e altre superfici morbide sono **a carico dell'utente**, non devono essere applicate automaticamente da Codex o dal nuovo MCP.
+- Durante posa, contatti e collisioni, il sistema deve identificare e registrare le **zone candidate a deformazione manuale**, con oggetto, personaggio/parte del corpo, punto o area e motivazione, distinguendo stime e casi incerti.
+- **Alla fine del lavoro sulla scena**, Codex deve presentare all'utente un riepilogo operativo delle deformazioni da eseguire, anche se alcune sono solo suggerite e non obbligatorie. Non confondere questo promemoria con una richiesta di correzione automatica della posa.
+
+### Libertà di modifica dei props e organizzazione della gerarchia
+- Durante la composizione della scena Codex/AI è **libero di spostare, ruotare o nascondere i props dell'environment** quando serve all'inquadratura e alla disposizione dei personaggi, nel rispetto delle altre regole di sicurezza del progetto.
+- **Ogni prop dell'environment di base che viene spostato/riutilizzato per la scena** deve essere rimosso dal gruppo gerarchico dell'environment di base e trasferito a un **gruppo dedicato ai props utilizzati/modificati nella scena**, così che sia immediatamente riconoscibile. Codex deve valutare se estendere lo stesso criterio ai props ruotati o altrimenti modificati; la regola esplicita riguarda almeno quelli spostati.
+- Durante il reparenting preservare la trasformazione **world-space**, l'aspetto e i collegamenti rilevanti; evitare duplicazioni o alterazioni accidentali. La scelta del nome del gruppo e le eccezioni per gerarchie riggate/istanze vanno verificate in DAZ Studio.
+- I props nascosti devono rimanere identificabili e gestibili, con stato di visibilità tracciabile, evitando cancellazioni non richieste.
+
+### Aggiornamenti obbligatori in docs/
+- **Durante l'implementazione**, aggiornare le procedure operative nel submodule Wiki `docs/`, in particolare `docs/Procedure-Scene-Posing-Completion.md`, includendo esplicitamente: libertà di spostare/nascondere props; trasferimento fuori dal gruppo dell'environment di base dei props riposizionati; conservazione delle trasformazioni world-space; raccolta delle deformazioni manuali; promemoria finale all'utente.
+- Aggiornare anche eventuali altre procedure pertinenti e Skills nel repo `daz-mcp`, dopo test reali in DAZ Studio. Non modificare ora i documenti operativi: questa è la specifica per Codex.
+
+| 2026-10-28 | Confermata | Deformazioni eseguite manualmente dall'utente, con promemoria finale delle aree da deformare. |
+| 2026-10-28 | Confermata | Codex può spostare/nascondere props; quelli spostati escono dal gruppo environment di base e passano in un gruppo props utilizzati; aggiornare le procedure in docs/. |
