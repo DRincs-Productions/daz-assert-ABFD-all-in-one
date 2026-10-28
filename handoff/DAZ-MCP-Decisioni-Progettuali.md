@@ -364,3 +364,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Codex può modificare autonomamente i nostri MCP per migliorare ulteriormente l'efficienza, misurando/verificando che l'ottimizzazione non comprometta correttezza e funzionamento in DAZ Studio; aggiornare `AGENTS.md`, README, Skills e procedure pertinenti in fase di implementazione.
 
 | 2026-10-28 | Confermata | MCP con output sintetici e strutturati di default; dettagli, log e immagini soltanto su richiesta o quando necessari. |
+
+## Autonomia nell'applicazione delle modifiche alla scena (decisione confermata)
+
+- Codex è autorizzato ad **applicare autonomamente modifiche alla scena DAZ Studio** (pose, articolazioni, posizioni dei personaggi, props, camere e relative impostazioni) **senza chiedere conferma all'utente per ogni intervento**, e deve verificarne il risultato.
+- Questa autonomia si applica durante l'esecuzione del workflow approvato e non elimina i vincoli su scelta iniziale della posa dalla libreria, correttezza geometrica, collisioni contestuali, batch con rollback intelligente e salvataggi automatici ai checkpoint coerenti.
+- La richiesta esistente di **mostrare l'anteprima della posa di libreria iniziale** rimane una fase informativa del workflow, **non un obbligo di approvazione** prima di ogni modifica.
+- Codex deve coinvolgere l'utente solo per decisioni esplicitamente riservate a lui (ad es. README dei submoduli asset e mappature Wiki/sidebar), per interventi manuali sulle superfici morbide, per errori non risolvibili o quando intende cambiare decisioni progettuali approvate.
+- Registrare i cambiamenti importanti, verificarli tramite strumenti MCP/viewport e rispettare il divieto di salvataggi sperimentali.
+- In fase di implementazione aggiornare `AGENTS.md`, le procedure Wiki e la documentazione `daz-mcp` per evitare ambiguità tra anteprima, verifica e approvazione.
+
+| 2026-10-28 | Confermata | Codex applica e verifica autonomamente le modifiche alla scena DAZ senza chiedere conferma per ogni intervento. |
