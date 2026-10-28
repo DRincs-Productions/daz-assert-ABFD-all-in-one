@@ -140,3 +140,36 @@ Codex è libero di valutare, combinare, sostituire o scartare i seguenti candida
 - I file temporanei devono seguire le convenzioni del progetto ed essere esclusi dai commit Git.
 
 | 2026-10-28 | Confermata | Un comando MCP deve acquisire e predisporre l'invio separato delle immagini di tutte le camere di scena, escludendo la vista di lavoro. |
+
+## Funzionalità avanzate del modulo camere — decisioni confermate
+
+Integrare nel progetto `daz-mcp`, riutilizzando ove possibile funzionalità esistenti, tutte le seguenti capacità:
+
+1. **Confronto automatico reference/viewport**: confronto locale tra immagine di riferimento e camera DAZ con metriche strutturate di allineamento, keypoint, scala, composizione e confidenza; evitare invii ripetuti di screenshot al modello.
+2. **Inquadratura automatica**: adattare camera e margini a uno o più personaggi/oggetti selezionati, senza perdere impostazioni importanti.
+3. **Navigazione mirata della vista libera**: centrare/orbitare/zoomare su articolazioni, volto, mani, piedi, punti di contatto o altri elementi selezionati; preservare le camere di produzione.
+4. **Overlay scheletro**: visualizzare sulle viste DAZ i keypoint/scheletri estratti dalla reference e/o quelli proiettati dal rig DAZ, distinguendoli chiaramente.
+5. **Snapshot e ripristino camera**: salvare e recuperare posizione, rotazione, focal length e parametri rilevanti, con ripristino sicuro dopo tentativi di calibrazione.
+6. **Validazione automatica inquadrature**: segnalare personaggi tagliati, soggetti troppo piccoli, occlusioni rilevanti, direzione errata e altri problemi verificabili; non presentare euristiche come certezze.
+7. **Ottimizzazione locale della camera rispetto alla reference**: effettuare tentativi e valutazioni localmente, con metriche e limiti, restituendo a Codex la configurazione migliore; distinguere gli errori di posa da quelli di camera e consentire a Codex di approvare/applicare o ripristinare.
+
+Queste sono **capacità richieste**, non vincoli sull'architettura o sulla scelta di librerie. Codex dovrà verificarne fattibilità, prestazioni, integrazione con l'MCP upstream e comportamento reale in DAZ Studio, evitando duplicazioni e consumo superfluo di token.
+
+## Aggiornamento continuo delle procedure Markdown — decisione confermata
+
+- Durante lo sviluppo, ogni modifica significativa o nuovo strumento MCP deve comportare la revisione delle procedure Markdown pertinenti, in particolare `docs/Procedure-Scene-Posing-Completion.md` nel submodule Wiki `docs/`.
+- Integrare i nuovi strumenti nei workflow effettivi (camera, posa, verifica, screenshot, ottimizzazione), migliorare i processi in generale ed eliminare istruzioni obsolete o ridondanti quando la sostituzione è verificata.
+- Aggiornare anche README, Skills e documentazione tecnica nel repository `daz-mcp` quando appropriato.
+- Modificare e committare i file nel repository/submodule proprietario corretto e aggiornare i gitlink del progetto principale. Non affermare che una procedura è verificata prima di averla testata.
+
+## Test reali durante lo sviluppo — decisione confermata
+
+- Codex deve **aprire DAZ Studio e testare concretamente** le funzionalità sviluppate con il server MCP, scene e camere pertinenti; i soli test unitari/statici non bastano.
+- Verificare comportamento reale, qualità dell'inquadratura, selezione e ripristino delle camere, isolamento della vista libera, funzionamento multicamera, output delle immagini e assenza di modifiche involontarie alla scena.
+- Eseguire test incrementali dopo modifiche rilevanti, riportare esito, limiti e problemi; non dichiarare completata una funzione non testata in DAZ.
+- Rispettare le regole del progetto per anteprime viewport, nessun render Iray intermedio e nessun file temporaneo committato.
+- La parola «fax» nel messaggio utente è interpretata **provvisoriamente come «DAZ»**; chiedere conferma se il significato è diverso.
+
+| 2026-10-28 | Confermata | Tutte le sette funzionalità avanzate di camera, inclusa ottimizzazione locale rispetto alla reference. |
+| 2026-10-28 | Confermata | Aggiornamento continuo delle procedure MD e dei workflow durante lo sviluppo. |
+| 2026-10-28 | Confermata | Apertura di DAZ Studio e test funzionali reali durante lo sviluppo. |
