@@ -333,3 +333,13 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Questa è una **modifica richiesta per la futura fase di implementazione**: non modificare ora `AGENTS.md` né il codice MCP; registrare la decisione nel presente handoff.
 
 | 2026-10-28 | Confermata | AGENTS.md autorizzerà Codex a modificare ed estendere liberamente gli MCP nostri per migliorarne funzionamento ed efficienza token, con test e documentazione. |
+
+## Salvataggio automatico della scena DAZ — checkpoint per fasi (decisione confermata)
+
+- Codex deve **salvare automaticamente la scena DAZ dopo ogni gruppo importante di modifiche** completato con successo (ad esempio posizionamento dei personaggi, fase significativa di rifinitura pose, configurazione delle camere o altra fase coerente).
+- Salvare solo a **checkpoint consistenti**: non nel mezzo di un batch, di un rollback, di un'operazione fallita o di una fase che richiede il ripristino dello stato.
+- Rispettare il percorso e le convenzioni del progetto e le procedure di salvataggio esistenti; **non creare file di scena sperimentali o copie intermedie arbitrarie**. Codex deve verificare il comportamento effettivo di DAZ Studio e l'esistenza del percorso prima di salvare.
+- Gestire e riportare errori di salvataggio, senza considerare completata la fase se la persistenza richiesta è fallita.
+- Questa decisione sostituisce la precedente preferenza proposta per il salvataggio soltanto manuale/previa conferma, ma **non** annulla i vincoli esistenti sui file sperimentali. Durante l'implementazione aggiornare `AGENTS.md` e `docs/Procedure-Scene-Posing-Completion.md` ove necessario, risolvendo esplicitamente eventuali contraddizioni con le istruzioni precedenti.
+
+| 2026-10-28 | Confermata | Salvataggio automatico della scena DAZ dopo ogni gruppo importante di modifiche riuscite, senza salvataggi sperimentali. |
