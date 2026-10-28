@@ -199,3 +199,16 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Questioni da chiarire: politica di applicazione delle correzioni automatiche, trattamento delle collisioni intenzionali e livello di accuratezza/prestazioni da privilegiare.
 
 | 2026-10-28 | Confermata | Progettazione del modulo Scene Inspector & Spatial Intelligence con sette capacità, analisi read-only predefinita e placement verificabile. |
+
+## Collisioni contestuali, materiali e personaggi non vestiti — decisioni confermate
+
+- **Non tutte le intersezioni sono errori**: Contact/Collision Detection e Smart Placement devono distinguere tipo di superficie/oggetto, entità della penetrazione, intenzione della posa e fase del workflow.
+- **Superfici morbide/deformabili** (materasso, letto, cuscini, divani): una penetrazione limitata del corpo può essere intenzionale/provvisoriamente accettabile perché la superficie potrà essere deformata in una fase successiva. Misurare e classificare, senza correggere indiscriminatamente; non presumere che ogni oggetto chiamato «bed» sia effettivamente deformabile.
+- **Oggetti rigidi** (tazza, tavolo, pavimento): applicare criteri di collisione più severi, con tolleranze geometriche appropriate e distinzione tra collisioni gravi e piccoli errori di precisione.
+- **Classificazione del materiale/rigidità**: Codex può fornire il contesto semantico; il modulo deve accettare proprietà/override espliciti e segnalare incertezza, evitando di inventare caratteristiche fisiche non disponibili nella scena.
+- **Personaggi senza vestiti nella fase attuale**: considerare posa e contatti come **provvisori**. Vestiti, scarpe, capelli e deformazioni successive cambieranno ingombri, occlusioni e punti di contatto. Evitare ottimizzazioni premature e rivalidare dopo la vestizione.
+- **Validazione per fasi**: (1) posa iniziale/anatomia/reference, (2) posizionamento e collisioni essenziali, (3) vestizione e nuove collisioni, (4) rifinitura finale di contatti, deformazioni e camere.
+- **Esiti contestuali**: classificare problemi come accettabile provvisoriamente, da rivalutare dopo vestizione/deformazione, da correggere ora o incerto; includere misura, motivazione e confidenza.
+- **Politica di correzione**: il modulo propone/calcola correzioni proporzionate al caso, mentre Codex decide se applicarle; non introdurre una regola universale di correzione automatica per tutte le collisioni. Conservare snapshot/ripristino e testare in DAZ Studio.
+
+| 2026-10-28 | Confermata | Collisioni e contatti contestuali a rigidità/deformabilità, gravità e fase di lavorazione; posa senza vestiti provvisoria. |
