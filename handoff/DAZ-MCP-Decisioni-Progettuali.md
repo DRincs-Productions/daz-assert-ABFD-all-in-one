@@ -288,3 +288,15 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Codex deve testare in DAZ Studio la ricerca, l'applicazione e la tracciabilità degli asset e aggiornare le procedure MD/Skills durante lo sviluppo.
 
 | 2026-10-28 | Confermata | Asset & Pose Library MCP può usare tutti gli asset DAZ installati, registrando quelli effettivamente utilizzati. |
+
+## Asset & Pose Library — ricerca rapida e README descrittivi delle cartelle (decisioni confermate)
+
+- **Ricerca a due livelli**: prima filtro rapido per nome, categoria, metadati, percorsi e descrizioni disponibili; poi analisi più costosa/geometrica solo delle pose/asset candidati. Se i candidati non sono soddisfacenti, ampliare gradualmente la ricerca.
+- **Documentazione delle cartelle di asset**: nelle diverse cartelle di asset esistenti prevedere un `README.md` descrittivo per cartella, che spieghi cosa contiene, tipologie di asset, casi d'uso ed eventuali esclusioni rilevanti per la ricerca.
+- **Approvazione umana per ogni cartella**: prima di creare o compilare il README di **ciascuna** cartella, Codex deve **chiedere all'utente** le informazioni/indicazioni necessarie e ottenere conferma; non inventare descrizioni sulla base di nomi ambigui e non produrre in massa README non approvati.
+- Il sistema di ricerca deve usare tali README per **individuare rapidamente le cartelle pertinenti ed escludere/prioritizzare quelle irrilevanti**, riducendo scansioni, tempi e token.
+- Le descrizioni potrebbero essere incomplete: consentire fallback e ricerca ampliata quando necessario, senza escludere definitivamente asset disponibili sulla base di metadati insufficienti.
+- Codex dovrà verificare la posizione e il perimetro delle cartelle di asset nel progetto e rispettare le convenzioni esistenti; non modificare contenuti di terze parti installati se non appropriato/autorizzato. Durante l'implementazione aggiornare procedure MD e Skills pertinenti.
+
+| 2026-10-28 | Confermata | Ricerca asset/pose prima rapida per metadati e percorsi, poi approfondita solo sui candidati. |
+| 2026-10-28 | Confermata | README descrittivo per ogni cartella di asset, previo confronto e conferma dell'utente per ciascuna cartella; README usati per filtrare la ricerca. |
