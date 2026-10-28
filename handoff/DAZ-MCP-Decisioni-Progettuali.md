@@ -266,3 +266,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Durante implementazione Codex deve testare in DAZ Studio e aggiornare le procedure MD pertinenti in `docs/` e la documentazione del nuovo MCP.
 
 | 2026-10-28 | Confermata | Scene Validation distingue problemi bloccanti, non bloccanti e interventi manuali; Codex valuta la gravità contestualmente. |
+
+## Batch Operations MCP — rollback intelligente (decisione confermata)
+
+- Le operazioni in batch devono supportare **dipendenze esplicite** tra modifiche e raggruppamenti coerenti.
+- Se una modifica fallisce, **ripristinare il gruppo di operazioni dipendenti** per evitare stati parziali o incoerenti; **conservare le operazioni indipendenti riuscite**.
+- Prima di mutazioni rilevanti, acquisire lo stato necessario al ripristino (trasformazioni, posa, camere, gerarchie, visibilità e altre proprietà effettivamente modificate). Non presumere atomicità transazionale nativa di DAZ Studio: Codex deve progettare e testare compensazioni e limiti.
+- Restituire un report strutturato e compatto con operazioni riuscite, fallite, saltate, ripristinate e quelle per cui il rollback non è stato possibile; non dichiarare un rollback riuscito senza verificarlo.
+- Applicare la stessa logica a spostamenti di personaggi, modifiche articolari, camera, props e reparenting in `Scene Props`, rispettando l'indipendenza reale delle operazioni.
+- Durante l'implementazione Codex deve eseguire test di errore a metà batch in DAZ Studio e aggiornare le procedure Markdown pertinenti.
+
+| 2026-10-28 | Confermata | Batch Operations: rollback delle modifiche dipendenti e conservazione di quelle indipendenti riuscite. |
