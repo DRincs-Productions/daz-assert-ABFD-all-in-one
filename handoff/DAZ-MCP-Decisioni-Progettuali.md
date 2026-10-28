@@ -432,3 +432,35 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - In fase di implementazione integrare questa distinzione in `AGENTS.md`, README/Skills di `daz-mcp` e procedure Wiki pertinenti.
 
 | 2026-10-28 | Confermata | Codex deve creare una nuova scena DAZ Studio isolata per sperimentare e testare concretamente gli MCP, senza toccare scene di produzione. |
+
+## Mandato operativo definitivo per Codex (leggere prima dell'implementazione)
+
+**Stato:** la progettazione è conclusa e l'utente autorizza l'implementazione completa. Questo file è la specifica operativa primaria: non limitarsi a proporre un piano, ma sviluppare, integrare, testare, documentare e committare le modifiche.
+
+### Avvio obbligatorio
+1. Leggere `AGENTS.md`, **tutto questo handoff**, la Wiki `docs/` (specialmente `docs/Procedure-Scene-Posing-Completion.md`) e il file Markdown della sidebar citato da `AGENTS.md`.
+2. Inizializzare/verificare i submoduli e le dipendenze. Analizzare il MCP upstream `mcp-server/` prima di duplicare funzionalità.
+3. Integrare `DRincs-Productions/daz-mcp` come submodulo nel repository principale. Implementare i nostri strumenti nel repository `daz-mcp` e preservare per quanto possibile l'upstream.
+4. Verificare che DAZ Studio sia disponibile, avviarlo e **creare una scena nuova, isolata e dedicata ai test**. In questa scena fare esperimenti reali con Genesis 9, pose della libreria, reference, camere, props, contatti/collisioni, batch, rollback e salvataggi. I test possono creare/salvare scene sperimentali solo nell'area locale dedicata, non nelle scene di produzione né in Git.
+5. Sviluppare iterativamente i componenti definiti in questo documento, correggere autonomamente errori dei nostri MCP, **provare ogni funzionalità in DAZ Studio** prima di considerarla completata e aggiornare progressivamente README, Skills e procedure.
+6. Aggiornare `AGENTS.md` con l'autonomia di miglioramento dei nostri MCP, il recupero errori, la riduzione dei token, la distinzione tra scena di test e produzione, i salvataggi automatici a checkpoint e le altre decisioni qui registrate.
+7. Chiedere all'utente **un submodulo asset alla volta** le informazioni per il relativo README e **un elemento della sidebar Wiki alla volta** la corretta associazione ai submoduli. Non inventare descrizioni o mappature e non bloccare gli altri sviluppi in attesa di queste risposte.
+8. Gestire i commit nel repository proprietario di ogni submodulo (compresa la Wiki) e aggiornare i gitlink del repository principale; evitare commit di modelli AI, cache, screenshot, output temporanei e scene sperimentali.
+
+### Ambito da realizzare (requisiti dettagliati nelle sezioni precedenti)
+- Analisi geometrica locale delle reference (1–3 persone) con **computer vision specializzata, non LLM**, stima keypoint/scheletro 2D/3D, orientamenti, occlusioni/confidenza, parametri camera; scelta e installazione autonome dei modelli dopo verifiche di licenza/hardware.
+- Pose & Skeleton: **iniziare sempre da una posa della libreria DAZ**, ricerca rapida per metadati, retargeting e rifinitura su Genesis 9, arresto adattivo dell'ottimizzazione.
+- Camera MCP: controlli completi inclusa **Focal Length**, dashboard multi-camera e camera libera ove fattibile, snapshot separati di tutte le camere di scena, confronto reference/viewport e ottimizzazione.
+- Scene Inspector & Spatial Intelligence: inventario, query spaziali, superfici, contatti, collisioni contestuali, smart placement, tracking modifiche e gruppo **`Scene Props`**; nessuna deformazione automatica di superfici morbide, ma promemoria finale all'utente.
+- Asset & Pose Library: tutti gli asset DAZ installati utilizzabili e tracciati; ricerca metadata-first, README dei submoduli e mappatura sidebar Wiki approvati dall'utente.
+- Batch Operations: rollback delle operazioni dipendenti, conservazione di quelle indipendenti; recupero autonomo dagli errori; output strutturati e sintetici di default.
+- Scene Validation: problemi bloccanti, non bloccanti e interventi manuali; checkpoint di salvataggio automatico solo dopo gruppi di modifiche coerenti.
+- Cache locale riutilizzabile `/.daz-mcp-cache/`, `.gitignore` aggiornato; modelli/pesi e file sperimentali fuori Git; valutare riuso di `validate_genesis9_rig.py` con test di parità prima di eventuali rimozioni.
+
+### Qualità e consegna
+- Preferire API affidabili, strumenti ad alto livello, operazioni batch, output compatti e minori round-trip per risparmiare token senza perdere dati necessari alla verifica.
+- La scelta di stack, librerie, modelli, architettura browser/desktop e ordine tecnico è delegata a Codex; non chiedere conferma su dettagli risolvibili con prove. Le decisioni già approvate nel presente file restano vincolanti.
+- **Non dichiarare completate funzionalità non testate**. Se una funzione non è supportata da DAZ Studio o dal client, documentare il limite e implementare il miglior fallback possibile.
+- Concludere con riepilogo delle funzioni implementate, test DAZ reali, risultati nella scena sperimentale, commit/documenti aggiornati, limiti residui e sole domande che richiedono effettivamente l'utente.
+
+| 2026-10-28 | Confermata | Mandato operativo completo trasferito nell'handoff: Codex può iniziare implementazione e test in scena DAZ sperimentale isolata. |
