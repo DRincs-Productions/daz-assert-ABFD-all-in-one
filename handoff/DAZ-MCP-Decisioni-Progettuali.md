@@ -343,3 +343,14 @@ Realizzare in `daz-mcp` un modulo di analisi geometrica della scena che **integr
 - Questa decisione sostituisce la precedente preferenza proposta per il salvataggio soltanto manuale/previa conferma, ma **non** annulla i vincoli esistenti sui file sperimentali. Durante l'implementazione aggiornare `AGENTS.md` e `docs/Procedure-Scene-Posing-Completion.md` ove necessario, risolvendo esplicitamente eventuali contraddizioni con le istruzioni precedenti.
 
 | 2026-10-28 | Confermata | Salvataggio automatico della scena DAZ dopo ogni gruppo importante di modifiche riuscite, senza salvataggi sperimentali. |
+
+## Gestione degli errori MCP — recupero autonomo (decisione confermata)
+
+- Se un nostro MCP fallisce, **Codex deve tentare autonomamente di diagnosticare e risolvere l'errore**, senza interrompere il lavoro per chiedere indicazioni a ogni inconveniente.
+- Sono autorizzati retry ragionati, ripristini dello stato, alternative sicure e, se necessario, **modifiche e miglioramenti al codice dei nostri MCP** per correggere la causa e prevenire ricorrenze.
+- Rispettare il rollback intelligente dei batch: non ripetere ciecamente operazioni non idempotenti, non salvare stati incoerenti, verificare il risultato dei tentativi di recupero e limitare retry/loop senza progresso.
+- **Avvisare/chiedere all'utente soltanto** quando il problema non è risolvibile autonomamente, è richiesta una decisione umana, oppure una correzione cambierebbe decisioni progettuali già approvate o comporterebbe rischi non autorizzati.
+- Restituire a Codex diagnosi, tentativi, esito e stato finale in forma sintetica; documentare i cambiamenti significativi e testarli realmente in DAZ Studio.
+- Durante l'implementazione riportare la regola in `AGENTS.md`, nella documentazione `daz-mcp` e nelle procedure pertinenti.
+
+| 2026-10-28 | Confermata | Codex recupera autonomamente dagli errori dei nostri MCP, anche modificandone il codice; coinvolge l'utente solo se necessario. |
